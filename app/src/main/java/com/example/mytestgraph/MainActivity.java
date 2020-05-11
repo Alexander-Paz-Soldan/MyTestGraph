@@ -17,6 +17,7 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -34,15 +35,17 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+        MindMappingView mindMappingView = new MindMappingView(this); // init mindmap
         createMindMap();
 
     }
 
     private void createMindMap(){
         // Create the MindMap object
-        MindMappingView mindMappingView = new MindMappingView(this);
-        Item item = new Item(this, "Root", "This is an root item", true);
-        mindMappingView.addCentralItem(item, false);
+        MindMappingView mindMappingView = (MindMappingView) findViewById(R.id.mind_mapping_view);
+        Item item = new Item(MainActivity.this, "Root", "This is an root item", true);
+        mindMappingView.addCentralItem(item, false); //I didn't want to make the root drag able
+
         Item child = new Item(MainActivity.this, "Child", "This is a child", true);
         mindMappingView.addItem(child, item, 200, 10, ItemLocation.TOP, true, null);
 
