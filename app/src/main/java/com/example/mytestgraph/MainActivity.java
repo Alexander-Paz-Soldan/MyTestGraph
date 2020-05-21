@@ -5,7 +5,6 @@ import android.os.Bundle;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-
 import android.util.Log;
 import android.view.View;
 import android.view.Menu;
@@ -33,6 +32,9 @@ public class MainActivity extends AppCompatActivity {
         loadBtn.setOnClickListener(new LoadListener());
 
     }
+
+    // geen Button maar een Spinner nodig
+
 
      class EditListener implements View.OnClickListener {
 

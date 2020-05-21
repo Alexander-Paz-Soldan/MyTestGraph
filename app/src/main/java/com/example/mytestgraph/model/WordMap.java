@@ -44,7 +44,7 @@ public class WordMap {
         }
 
         // create connection
-        public Arrow createArrow() {
+        public Arrow createArrow(Card from, Card to) {
 
             long uid = nextArrowUid;
             nextArrowUid++;
@@ -61,7 +61,9 @@ public class WordMap {
      * @param card the node to remove
      */
     public void removeCard(Card card) {
-            cards.remove(card.uid);
+
+        cards.remove(card.uid);
+
         }
 
         // removing connections from the network

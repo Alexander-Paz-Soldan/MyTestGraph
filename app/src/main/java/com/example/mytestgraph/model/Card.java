@@ -6,10 +6,28 @@ package com.example.mytestgraph.model;
 public class Card {
 
     public long uid;
-    public String familiarWord;
-    public String foreignWord;
-    long x;
-    long y;
+
+    public String getFamiliarWord() {
+        return familiarWord;
+    }
+
+    public void setFamiliarWord(String familiarWord) {
+        this.familiarWord = familiarWord;
+    }
+
+    public String getForeignWord() {
+        return foreignWord;
+    }
+
+    public void setForeignWord(String foreignWord) {
+        this.foreignWord = foreignWord;
+    }
+
+    private String familiarWord;
+    private String foreignWord;
+    public long x;
+    public long y;
+
 
 
     public String toJSON() {
