@@ -28,7 +28,11 @@ public class WordMap {
             arrows = new HashMap<Long, Arrow>();
         }
 
-        public Card createCard() {
+    /**
+     * Card is a Node
+     * @return a Card representing a Node in the network
+     */
+    public Card createCard() {
             long uid = nextCardUid;
             nextCardUid++;
 
@@ -39,7 +43,9 @@ public class WordMap {
             return newCard;
         }
 
+        // create connection
         public Arrow createArrow() {
+
             long uid = nextArrowUid;
             nextArrowUid++;
 
@@ -50,19 +56,26 @@ public class WordMap {
             return newArrow;
         }
 
-        public void removeCard(Card card) {
+    /**
+     * remove nodes from the netwoek
+     * @param card the node to remove
+     */
+    public void removeCard(Card card) {
             cards.remove(card.uid);
         }
 
+        // removing connections from the network
         public void removeArrow(Arrow arrow) {
             arrows.remove(arrow.uid);
         }
 
+        // make json to send the map
         public String toJSON() {
             // TODO
             return "";
         };
 
+        // load from a map
         static public WordMap fromJSON(String json) {
             WordMap wordMap = new WordMap();
             // TODO
