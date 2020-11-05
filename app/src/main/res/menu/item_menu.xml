@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/delete"
+        android:orderInCategory="100"
+        android:title="verwijder" />
+    <item
+        android:id="@+id/add"
+        android:orderInCategory="100"
+        android:title="nieuwe kaart" />
+    <item
+        android:id="@+id/edit"
+        android:orderInCategory="100"
+        android:title="bewerk" />
+</menu>

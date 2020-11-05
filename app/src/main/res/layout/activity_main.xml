@@ -12,17 +12,17 @@
             android:id="@+id/editBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/edit_a_network" />
+            android:text="Maak Woordkaart" />
 
         <Button
             android:id="@+id/loadBtn"
-            android:text="@string/load_a_network"
+            android:text="Open een Woordkaart"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
         <Button
             android:id="@+id/practiseBtn"
-            android:text="@string/practise"
+            android:text="Oefenen"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 

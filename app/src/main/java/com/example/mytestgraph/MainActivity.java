@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
 
         // add listeners to the buttons
         editBtn.setOnClickListener(new EditListener());
-        practiseBtn.setOnClickListener(new Practiseistener());
+        practiseBtn.setOnClickListener(new PractiseListener());
         loadBtn.setOnClickListener(new LoadListener());
 
     }
@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onClick(View v) {
-            Toast.makeText(v.getContext(),"Pressed edit",Toast.LENGTH_SHORT).show();
+            //Toast.makeText(v.getContext(),"Pressed edit",Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(v.getContext(), EditWordMap.class);
             startActivity(intent);
         }
@@ -50,14 +50,14 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onClick(View v) {
-            Toast.makeText(v.getContext(),"Pressed load",Toast.LENGTH_SHORT).show();
+            //Toast.makeText(v.getContext(),"Pressed load",Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(v.getContext(),EditWordMap.class);
             startActivity(intent);
 
         }
     }
 
-   class Practiseistener implements View.OnClickListener {
+   class PractiseListener implements View.OnClickListener {
 
         @Override
         public void onClick(View v) {
