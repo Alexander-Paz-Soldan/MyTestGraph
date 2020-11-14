@@ -11,9 +11,11 @@ public class Arrow {
     public Card destination;
     public Type type;
 
-
+    /**
+     * for the Firebase app
+     * @return
+     */
     public String toJSON() {
-        // TODO
         return "";
     }
 

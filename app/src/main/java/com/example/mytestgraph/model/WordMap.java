@@ -5,7 +5,7 @@ import java.util.Map;
 
 public class WordMap {
 
-        public String uid;
+        public long uid;
         public String owner;
         public String name;
         public String description;
@@ -19,7 +19,7 @@ public class WordMap {
             arrows = new HashMap<Long, Arrow>();
         }
 
-        public WordMap(String uid, String owner, String name, String description) {
+        public WordMap(long uid, String owner, String name, String description) {
             this.uid = uid;
             this.owner = owner;
             this.name = name;
@@ -71,9 +71,8 @@ public class WordMap {
             arrows.remove(arrow.uid);
         }
 
-        // make json to send the map
+        // make json to send the map to the Database
         public String toJSON() {
-            // TODO
             return "";
         };
 

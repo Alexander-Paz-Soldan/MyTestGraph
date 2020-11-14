@@ -99,7 +99,11 @@ public class EditWordMap extends AppCompatActivity {
         }
     }
 
-
+    /**
+     * We want the items to have our own style.
+     * @param item
+     * @return
+     */
     private Item resetItemStyle(Item item){
 
         LinearLayout myItem = (LinearLayout) item.getRootView();
@@ -123,7 +127,7 @@ public class EditWordMap extends AppCompatActivity {
 
     }
 
-
+    // the item is set back
     private void setItemBack(LinearLayout layout){
 
         TextView title = new TextView(layout.getContext());
@@ -191,18 +195,15 @@ public class EditWordMap extends AppCompatActivity {
          setItemEditable(layout);
          // the item should store things in the card once done
 
-         item.setOnContextClickListener(new EditListener());
+         item.setOnClickListener(new EditListener());
 
     }
 
-    private class EditListener implements View.OnContextClickListener{
-
-        // when in here no listening on items
+    private class EditListener implements View.OnClickListener{
 
         @Override
-        public boolean onContextClick(View view) {
+        public void onClick(View view) {
 
-            return false;
         }
     }
 
